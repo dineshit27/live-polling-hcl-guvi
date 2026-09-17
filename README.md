@@ -359,8 +359,6 @@ The interface uses an **Obsidian Editorial** visual direction instead of a gener
 - Crisp editorial typography
 - Plus Jakarta Sans for UI and display text
 - JetBrains Mono for counters and telemetry
-- Subtle borders
-- High-contrast controls
 - Smooth progress transitions
 - Responsive layouts
 - Keyboard-friendly interactions
@@ -383,44 +381,6 @@ Watch votes live.
 ```
 
 It also includes an interactive live-result preview to visually communicate the realtime capability.
-
----
-
-### Polls Workspace
-
-```text
-┌───────────────────────────────────────────────┐
-│ Search polls...              Sort: Newest     │
-├───────────────────────────────────────────────┤
-│ All   Active   Closed   My Polls              │
-├───────────────────────────────────────────────┤
-│                                               │
-│ Poll Card                                     │
-│ Live • 24 Votes                               │
-│ ███████████████████░░░                        │
-│                                               │
-└───────────────────────────────────────────────┘
-```
-
----
-
-### Poll Studio
-
-The poll creation interface uses a dual-column layout:
-
-```text
-┌───────────────────────┬───────────────────────┐
-│                       │                       │
-│    Poll Form          │    Live Preview       │
-│                       │                       │
-│    Title              │    Question           │
-│    Description        │    Option A           │
-│    Options            │    Option B           │
-│                       │    Option C           │
-│    Create Poll        │                       │
-│                       │                       │
-└───────────────────────┴───────────────────────┘
-```
 
 ---
 
@@ -734,44 +694,6 @@ poll:C:events
 ```
 
 A vote from Poll A does not update Poll B.
-
----
-
-# 🌐 Production Architecture
-
-```mermaid
-flowchart TB
-
-    USER["🌐 User Browser"]
-
-    HTTPS["🔒 HTTPS / TLS"]
-
-    NGINX["Nginx<br/>Reverse Proxy"]
-
-    REACT["React Static Application"]
-
-    GO["Go + Gin API"]
-
-    MONGO[("MongoDB<br/>Persistent Database")]
-
-    REDIS[("Redis<br/>Pub/Sub")]
-
-    SSE["Go SSE Layer"]
-
-    USER --> HTTPS
-    HTTPS --> NGINX
-
-    NGINX --> REACT
-    NGINX --> GO
-
-    GO --> MONGO
-    GO --> REDIS
-    REDIS --> SSE
-
-    SSE --> GO
-    GO --> NGINX
-    NGINX --> USER
-```
 
 ---
 
@@ -1089,52 +1011,6 @@ The backend must derive identity from a verified token.
 
 ---
 
-# 🧪 Evaluator Test Scenario
-
-A simple evaluator can verify the core realtime feature with two browser windows.
-
-### Window A
-
-1. Open the application.
-2. Login or create an account.
-3. Create a poll.
-4. Open the poll.
-
-### Window B
-
-1. Open the same poll.
-2. Keep the results visible.
-
-### Then
-
-Vote from Window A.
-
-Expected:
-
-```text
-Window A
-   ↓
-Go API
-   ↓
-MongoDB
-   ↓
-Redis Pub/Sub
-   ↓
-Go SSE
-   ↓
-Window B
-```
-
-Window B should update automatically.
-
-### Important
-
-Do **not** refresh Window B.
-
-If the result changes without refreshing, the realtime architecture is working.
-
----
-
 # 📚 Resources
 
 <div align="center">
@@ -1152,44 +1028,6 @@ If the result changes without refreshing, the realtime architecture is working.
 </a>
 
 </div>
-
----
-
-# 🗺️ Development Roadmap
-
-```text
-[✓] Architecture
-       ↓
-[✓] React + Go/Gin scaffolding
-       ↓
-[✓] MongoDB persistence
-       ↓
-[✓] Authentication
-       ↓
-[✓] Poll CRUD
-       ↓
-[✓] Voting + deduplication
-       ↓
-[✓] Redis Pub/Sub
-       ↓
-[✓] Go SSE
-       ↓
-[✓] React realtime UI
-       ↓
-[✓] Functional regression
-       ↓
-[✓] UI/UX redesign
-       ↓
-[✓] Security audit
-       ↓
-[✓] Production configuration
-       ↓
-[ ] Final public deployment
-       ↓
-[ ] Final demo + submission
-```
-
-> Update the final two items after completing the public deployment and submission.
 
 ---
 
@@ -1245,7 +1083,7 @@ MIT License
 ## Dinesh M
 
 B.Tech Information Technology  
-Full Stack Developer • Software Developer • Builder
+AI Full Stack Developer • UI/UX & Graphic Designer • Freelancer • Exploring AI & IoT
 
 <a href="YOUR_GITHUB_REPOSITORY_URL">
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
@@ -1257,6 +1095,14 @@ Full Stack Developer • Software Developer • Builder
 
 <a href="YOUR_PORTFOLIO_URL">
   <img src="https://img.shields.io/badge/Portfolio-Visit-6366F1?style=for-the-badge">
+</a>
+
+<a href="YOUR_PEERLIST_URL">
+  <img src="https://img.shields.io/badge/Peerlist-00AA45?style=for-the-badge&logo=peerlist&logoColor=white">
+</a>
+
+<a href="YOUR_X_URL">
+  <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white">
 </a>
 
 </div>
