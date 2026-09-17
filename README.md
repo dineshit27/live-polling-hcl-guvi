@@ -46,19 +46,7 @@ The application uses:
 When a user votes, the event follows this path:
 
 ```text
-React Client
-     ↓
-Go/Gin API
-     ↓
-MongoDB
-     ↓
-Redis Pub/Sub
-     ↓
-Go Realtime Subscriber
-     ↓
-SSE
-     ↓
-Connected React Clients
+React Client ➞ Go/Gin API ➞ MongoDB ➞ Redis Pub/Sub ➞ Go Realtime Subscriber ➞ SSE ➞ Connected React Clients
 ```
 
 No page refresh | No fake timers | No frontend polling.
@@ -1144,30 +1132,6 @@ Window B should update automatically.
 Do **not** refresh Window B.
 
 If the result changes without refreshing, the realtime architecture is working.
-
----
-
-# 🎥 Demo Video
-
-Add your final 3–5 minute demo link here:
-
-<a href="YOUR_DEMO_VIDEO_URL">
-  <img src="https://img.shields.io/badge/▶️_Watch_Demo-YouTube-red?style=for-the-badge&logo=youtube">
-</a>
-
-### Recommended demo flow
-
-```text
-00:00 → Project introduction
-00:30 → Signup / Login
-01:00 → Create poll
-01:30 → Open poll in two clients
-02:00 → Vote from Client A
-02:15 → Show live update on Client B
-02:45 → Explain MongoDB + Redis + SSE
-03:30 → Security / duplicate voting
-04:00 → Architecture + hardest challenge
-```
 
 ---
 
