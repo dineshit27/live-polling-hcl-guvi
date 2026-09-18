@@ -1125,6 +1125,6 @@ It helps the project get noticed and encourages further development.
 
 <br>
 
-Made with ❤️ by **Dinesh M**
+Made with 💙 by **Dinesh M**
 
 </div>
