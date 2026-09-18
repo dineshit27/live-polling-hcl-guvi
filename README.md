@@ -1,4 +1,4 @@
-<img src="images/Project Banner.png" alt="Live Polling Platform Banner" width="100%">
+<img src="src/images/github-banner" alt="Live Polling Platform Banner" width="100%">
 
 <div align="center">
 
