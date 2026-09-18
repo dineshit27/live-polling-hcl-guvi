@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { User, HealthCheckResponse } from '../types';
 import {
-  Radio,
   Plus,
   LogIn,
   LogOut,
@@ -46,10 +45,12 @@ export const Navigation: React.FC<NavigationProps> = ({
               onClick={onHomeClick}
               className="flex items-center gap-2.5 text-left group cursor-pointer focus-visible:outline-none"
             >
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-600 to-teal-400 p-[1px] shadow-md shadow-sky-500/10 group-hover:shadow-sky-500/25 transition-all">
-                <div className="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center text-sky-400 group-hover:text-white transition-colors">
-                  <Radio className="w-4 h-4" />
-                </div>
+              <div className="w-9 h-9 rounded-xl shadow-md shadow-sky-500/10 group-hover:shadow-sky-500/25 transition-all overflow-hidden flex-shrink-0">
+                <img
+                  src="/src/images/pulse-poll.jpg"
+                  alt="PULSE logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div>
