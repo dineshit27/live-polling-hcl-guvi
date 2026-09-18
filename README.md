@@ -1015,11 +1015,11 @@ The backend must derive identity from a verified token.
 
 <div align="center">
 
-<a href="YOUR_LIVE_URL">
+<a href="https://pulse-live-hclguvi.onrender.com/">
   <img src="https://img.shields.io/badge/🚀_Live_Demo-Open-00C853?style=for-the-badge">
 </a>
 
-<a href="YOUR_GITHUB_REPOSITORY_URL">
+<a href="https://github.com/dineshit27/live-polling-hcl-guvi">
   <img src="https://img.shields.io/badge/💻_Source_Code-GitHub-181717?style=for-the-badge&logo=github">
 </a>
 
@@ -1085,23 +1085,23 @@ MIT License
 B.Tech Information Technology  
 AI Full Stack Developer • UI/UX & Graphic Designer • Freelancer • Exploring AI & IoT
 
-<a href="YOUR_GITHUB_REPOSITORY_URL">
+<a href="https://github.com/dineshit27">
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
 </a>
 
-<a href="YOUR_LINKEDIN_URL">
+<a href="https://www.linkedin.com/in/m-dinesh-d30/">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
 </a>
 
-<a href="YOUR_PORTFOLIO_URL">
+<a href="https://m-dinesh-30.web.app/">
   <img src="https://img.shields.io/badge/Portfolio-Visit-6366F1?style=for-the-badge">
 </a>
 
-<a href="YOUR_PEERLIST_URL">
+<a href="https://peerlist.io/mr_dineshit">
   <img src="https://img.shields.io/badge/Peerlist-00AA45?style=for-the-badge&logo=peerlist&logoColor=white">
 </a>
 
-<a href="YOUR_X_URL">
+<a href="https://x.com/mr_dinesh_io">
   <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white">
 </a>
 
