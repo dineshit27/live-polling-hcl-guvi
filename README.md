@@ -194,28 +194,6 @@ sequenceDiagram
 
 # 📡 SSE Lifecycle
 
-Each connected poll viewer establishes a Server-Sent Events stream.
-
-```text
-CONNECT
-   ↓
-POLL_SNAPSHOT
-   ↓
-CONNECTED
-   ↓
-VOTE_CAST
-   ↓
-VOTE_CAST
-   ↓
-POLL_STATUS
-   ↓
-HEARTBEAT
-   ↓
-DISCONNECT
-   ↓
-CLEANUP
-```
-
 The frontend exposes connection states:
 
 ```text
@@ -868,21 +846,6 @@ The application should report a healthy backend with MongoDB and Redis connected
 
 ---
 
-# 🧱 Engineering Decisions
-
-## MongoDB as Source of Truth
-
-MongoDB stores:
-
-- Users
-- Polls
-- Votes
-- Vote counts
-
-Redis is intentionally not used as the permanent database.
-
----
-
 ## Redis Pub/Sub for Realtime
 
 Redis is responsible for distributing events between backend realtime subscribers.
@@ -964,50 +927,6 @@ The implementation was manually verified through:
 
 ---
 
-# 🧠 What I Learned
-
-Building this project required understanding more than just the UI.
-
-### 1. Event-driven architecture
-
-A vote is not simply a database update.
-
-It becomes an event that needs to reach all relevant connected clients.
-
-### 2. Persistence vs realtime
-
-MongoDB answers:
-
-> What is the current truth?
-
-Redis answers:
-
-> Who should receive this event?
-
-### 3. SSE lifecycle management
-
-Long-lived connections require:
-
-- Heartbeats
-- Cleanup
-- Reconnection
-- Context cancellation
-- Subscriber management
-
-### 4. Database-level guarantees
-
-Client-side duplicate prevention is not sufficient.
-
-The database must enforce uniqueness.
-
-### 5. Server-side authorization
-
-The browser cannot be trusted to determine ownership.
-
-The backend must derive identity from a verified token.
-
----
-
 # 📚 Resources
 
 <div align="center">
@@ -1025,39 +944,6 @@ The backend must derive identity from a verified token.
 </a>
 
 </div>
-
----
-
-# 🤝 Contributing
-
-Contributions, suggestions and improvements are welcome.
-
-### Fork the repository
-
-```bash
-git fork YOUR_GITHUB_REPOSITORY_URL
-```
-
-### Create a branch
-
-```bash
-git checkout -b feature/your-feature
-```
-
-### Make your changes
-
-```bash
-git add .
-git commit -m "feat: add your feature"
-```
-
-### Push
-
-```bash
-git push origin feature/your-feature
-```
-
-Then open a Pull Request.
 
 ---
 
