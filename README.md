@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# 📊 Live Polling Platform
+# Pulse - Live Polling Platform
 
 ### Create polls. Share them. Watch votes happen live.
 
