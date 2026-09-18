@@ -411,18 +411,12 @@ Rust
 > Add your final screenshots inside the `images/` directory and update the filenames below.
 
 <p align="center">
-  <img src="images/landing.png" alt="Landing Page" width="48%">
-  <img src="images/dashboard.png" alt="Poll Dashboard" width="48%">
+  <img src="src/images/ss1" alt="Landing Page" width="48%">
+  <img src="src/images/ss2" alt="Poll Dashboard" width="48%">
 </p>
 
 <p align="center">
-  <img src="images/create-poll.png" alt="Create Poll" width="48%">
-  <img src="images/live-results.png" alt="Live Results" width="48%">
-</p>
-
-<p align="center">
-  <img src="images/auth.png" alt="Authentication" width="48%">
-  <img src="images/mobile.png" alt="Mobile Responsive UI" width="48%">
+  <img src="src/images/ss3" alt="Create Poll" width="48%">
 </p>
 
 ---
