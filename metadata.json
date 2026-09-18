@@ -1,0 +1,8 @@
+{
+  "name": "Remix Live Polling Application",
+  "description": "Production-grade live polling platform with Go/Gin backend, MongoDB persistence, Redis Pub/Sub realtime events, and React frontend.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
