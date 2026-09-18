@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { User, HealthCheckResponse } from '../types';
-import pulseLogo from '../images/pulse-poll.jpg';
+
 import {
   Plus,
   LogIn,
@@ -46,9 +46,9 @@ export const Navigation: React.FC<NavigationProps> = ({
               onClick={onHomeClick}
               className="flex items-center gap-2.5 text-left group cursor-pointer focus-visible:outline-none"
             >
-              <div className="w-9 h-9 rounded-xl shadow-md shadow-sky-500/10 group-hover:shadow-sky-500/25 transition-all overflow-hidden flex-shrink-0">
+              <div className="w-10 h-10 rounded-xl shadow-md shadow-sky-500/20 group-hover:shadow-sky-500/40 transition-all overflow-hidden flex-shrink-0 border border-slate-700/50">
                 <img
-                  src={pulseLogo}
+                  src="/pulse-poll.jpg"
                   alt="PULSE logo"
                   className="w-full h-full object-cover"
                 />
