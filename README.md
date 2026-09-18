@@ -10,7 +10,7 @@ A full-stack real-time polling platform built with **React, Go/Gin, MongoDB, Red
 
 Build a poll, share it with anyone, collect votes, and watch the results update instantly across connected clients — without refreshing the page.
 
-<img src="https://img.shields.io/badge/Status-Production_Ready-00C853?style=flat-square">
+<img src="https://img.shields.io/badge/Status-Deployed-00C853?style=flat-square">
 <img src="https://img.shields.io/badge/Version-1.0.0-6366F1?style=flat-square">
 <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black">
 <img src="https://img.shields.io/badge/Go-1.23-00ADD8?style=flat-square&logo=go&logoColor=white">
@@ -766,8 +766,7 @@ Install:
 ## 1. Clone
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-
+git clone https://github.com/dineshit27/live-polling-hcl-guvi.git cd live-polling-hcl-guvi
 cd live-polling-platform
 ```
 
