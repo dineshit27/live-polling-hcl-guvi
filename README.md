@@ -474,7 +474,11 @@ Expected healthy state:
 
 ```json
 {
-  "status": "healthy"
+  "status": "healthy",
+  "services": {
+    "mongodb": "connected",
+    "redis": "connected"
+  }
 }
 ```
 
