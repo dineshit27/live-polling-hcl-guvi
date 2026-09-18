@@ -96,8 +96,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </span>
               </h1>
               <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-lg pt-2">
-                Real-time polling infrastructure engineered for instant feedback. Every vote publishes
-                through Redis channels and streams directly to connected browsers via SSE with sub-second delivery.
+                Real-time polling infrastructure engineered for instant feedback. Create shareable live polls
+                with frictionless online voting, where every vote publishes through Redis channels and streams
+                live results directly to connected browsers via SSE with sub-second delivery.
               </p>
             </div>
 

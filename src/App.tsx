@@ -11,6 +11,7 @@ import { HealthModal } from './components/HealthModal';
 import { ToastProvider, useToast } from './components/Toast';
 import { api, getStoredToken, setStoredToken, BACKEND_BASE_URL } from './services/api';
 import { Radio, Database, Server, Cpu, CheckCircle2, Heart } from 'lucide-react';
+import { useSEO, DEFAULT_TITLE, DEFAULT_DESCRIPTION, DEFAULT_CANONICAL } from './hooks/useSEO';
 
 function MainApp() {
   const { showToast } = useToast();
@@ -26,6 +27,15 @@ function MainApp() {
   const [authToken, setAuthToken] = useState<string | null>(null);
 
   const workspaceRef = useRef<HTMLDivElement | null>(null);
+
+  // Manage landing page vs modal SEO
+  useSEO({
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    canonical: DEFAULT_CANONICAL,
+    robots: isAuthModalOpen ? 'noindex, nofollow' : 'index, follow',
+    enabled: !selectedPollId,
+  });
 
   // Initialize auth from localStorage & /api/auth/me
   useEffect(() => {

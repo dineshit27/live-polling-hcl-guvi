@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pulse-live-hclguvi.onrender.com/sitemap.xml

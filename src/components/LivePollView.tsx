@@ -24,6 +24,7 @@ import {
   Sparkles,
   Radio,
 } from 'lucide-react';
+import { useSEO, sanitizeMetaText } from '../hooks/useSEO';
 
 interface LivePollViewProps {
   pollId: string;
@@ -62,6 +63,24 @@ export const LivePollView: React.FC<LivePollViewProps> = ({
   const [copiedLink, setCopiedLink] = useState(false);
   const [recentlyUpdatedOptionId, setRecentlyUpdatedOptionId] = useState<string | null>(null);
   const [viewResultsMode, setViewResultsMode] = useState(false);
+
+  // Dynamic SEO metadata for public poll
+  const pollTitle = poll?.title ? sanitizeMetaText(poll.title) : '';
+  const pageTitle = pollTitle
+    ? `Vote: ${pollTitle} | PULSE Live`
+    : 'Live Poll Stream | PULSE Live';
+  const pageDescription = pollTitle
+    ? `Vote in "${pollTitle}" and see results update in real time with PULSE Live.`
+    : 'Vote in this live poll and see results update in real time with PULSE Live.';
+  const pollCanonical = `https://pulse-live-hclguvi.onrender.com/#${pollId}`;
+
+  useSEO({
+    title: pageTitle,
+    description: pageDescription,
+    canonical: pollCanonical,
+    robots: 'index, follow',
+    enabled: true,
+  });
 
   const prevCountsRef = useRef<Record<string, number>>({});
   const voterIdentifier = getVoterIdentifier();
@@ -240,7 +259,7 @@ export const LivePollView: React.FC<LivePollViewProps> = ({
   const showResults = isClosed || hasVoted || viewResultsMode;
 
   return (
-    <div id="live-poll-view" className="max-w-2xl w-full mx-auto space-y-6">
+    <article id="live-poll-view" aria-labelledby="poll-title" className="max-w-2xl w-full mx-auto space-y-6">
       
       {/* Top Controls Bar */}
       <div className="flex items-center justify-between gap-4">
@@ -248,6 +267,7 @@ export const LivePollView: React.FC<LivePollViewProps> = ({
           id="back-to-polls-btn"
           type="button"
           onClick={onBack}
+          aria-label="Return to all polls"
           className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors cursor-pointer group"
         >
           <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
@@ -275,6 +295,7 @@ export const LivePollView: React.FC<LivePollViewProps> = ({
             type="button"
             onClick={handleShare}
             title="Share Poll"
+            aria-label="Share public poll URL"
             className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer"
           >
             {copiedLink ? <Check className="w-4 h-4 text-emerald-400" /> : <Share2 className="w-4 h-4" />}
@@ -586,6 +607,6 @@ export const LivePollView: React.FC<LivePollViewProps> = ({
           }}
         />
       )}
-    </div>
+    </article>
   );
 };

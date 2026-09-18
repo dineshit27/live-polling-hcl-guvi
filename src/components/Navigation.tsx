@@ -44,12 +44,16 @@ export const Navigation: React.FC<NavigationProps> = ({
             <button
               type="button"
               onClick={onHomeClick}
+              aria-label="PULSE Home"
               className="flex items-center gap-2.5 text-left group cursor-pointer focus-visible:outline-none"
             >
               <div className="w-10 h-10 rounded-xl shadow-md shadow-sky-500/20 group-hover:shadow-sky-500/40 transition-all overflow-hidden flex-shrink-0 border border-slate-700/50">
                 <img
                   src="/pulse-poll.jpg"
                   alt="PULSE logo"
+                  width="40"
+                  height="40"
+                  loading="eager"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -71,7 +75,7 @@ export const Navigation: React.FC<NavigationProps> = ({
           </div>
 
           {/* Desktop Right Navigation Controls */}
-          <div className="hidden md:flex items-center gap-3">
+          <nav aria-label="Main Navigation" className="hidden md:flex items-center gap-3">
             {/* System Architecture / Health Badge Button */}
             <button
               type="button"
@@ -133,7 +137,7 @@ export const Navigation: React.FC<NavigationProps> = ({
                 <span>Sign In</span>
               </button>
             )}
-          </div>
+          </nav>
 
           {/* Mobile Menu Toggle Button */}
           <div className="flex md:hidden items-center gap-2">
@@ -160,7 +164,7 @@ export const Navigation: React.FC<NavigationProps> = ({
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-800 space-y-3">
+          <nav aria-label="Mobile Navigation" className="md:hidden py-4 border-t border-slate-800 space-y-3">
             <button
               type="button"
               onClick={() => {
@@ -216,7 +220,7 @@ export const Navigation: React.FC<NavigationProps> = ({
                 <span>Sign In / Register</span>
               </button>
             )}
-          </div>
+          </nav>
         )}
       </div>
     </header>

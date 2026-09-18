@@ -1,21 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Remix Live Polling Application</title>
-    <meta name="description" content="Production-grade live polling platform with Go/Gin backend, MongoDB persistence, Redis Pub/Sub realtime events, and React frontend." />
-    <meta property="og:title" content="Remix Live Polling Application" />
-    <meta property="og:description" content="Production-grade live polling platform with Go/Gin backend, MongoDB persistence, Redis Pub/Sub realtime events, and React frontend." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PULSE Live — Real-Time Polling Platform</title>
+  <meta name="description"
+    content="Create, share, and vote on live polls with real-time results powered by Go, Redis Pub/Sub, MongoDB, and Server-Sent Events." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pulse-live-hclguvi.onrender.com/" />
+  <link rel="icon" type="image/jpeg" href="/pulse-poll.jpg" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pulse-live-hclguvi.onrender.com/" />
+  <meta property="og:title" content="PULSE Live — Real-Time Polling Platform" />
+  <meta property="og:description" content="Create, share, and vote on live polls with real-time results." />
+  <meta property="og:site_name" content="PULSE Live" />
+  <meta property="og:image" content="https://pulse-live-hclguvi.onrender.com/pulse-poll.jpg" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PULSE Live — Real-Time Polling Platform" />
+  <meta name="twitter:description" content="Create, share, and vote on live polls with real-time results." />
+  <meta name="twitter:image" content="https://pulse-live-hclguvi.onrender.com/pulse-poll.jpg" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "PULSE Live",
+    "url": "https://pulse-live-hclguvi.onrender.com/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Create, share, and vote on live polls with real-time results powered by Go, Redis Pub/Sub, MongoDB, and Server-Sent Events."
+  }
+  </script>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
