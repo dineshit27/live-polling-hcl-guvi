@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { User, HealthCheckResponse } from '../types';
+import pulseLogo from '../images/pulse-poll.jpg';
 import {
   Plus,
   LogIn,
@@ -47,7 +48,7 @@ export const Navigation: React.FC<NavigationProps> = ({
             >
               <div className="w-9 h-9 rounded-xl shadow-md shadow-sky-500/10 group-hover:shadow-sky-500/25 transition-all overflow-hidden flex-shrink-0">
                 <img
-                  src="/src/images/pulse-poll.jpg"
+                  src={pulseLogo}
                   alt="PULSE logo"
                   className="w-full h-full object-cover"
                 />
