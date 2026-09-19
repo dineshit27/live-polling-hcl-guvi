@@ -388,8 +388,9 @@ Rust
 
 > Add your final screenshots inside the `images/` directory and update the filenames below.
 
+<img src="src/images/ss1" alt="Landing Page" width="48%">
+
 <p align="center">
-  <img src="src/images/ss1" alt="Landing Page" width="48%">
   <img src="src/images/ss2" alt="Poll Dashboard" width="48%">
 </p>
 
