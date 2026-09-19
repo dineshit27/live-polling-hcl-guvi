@@ -392,7 +392,7 @@ Rust
 
 <img src="src/images/ss2" alt="Poll Dashboard" width="100%">
 
-<img src="src/images/ss3" alt="Create Poll" width="48%">
+<img src="src/images/ss3" alt="Create Poll" width="100%">
 
 ---
 
