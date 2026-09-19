@@ -390,13 +390,9 @@ Rust
 
 <img src="src/images/ss1" alt="Landing Page" width="100%">
 
-<p align="center">
-  <img src="src/images/ss2" alt="Poll Dashboard" width="48%">
-</p>
+<img src="src/images/ss2" alt="Poll Dashboard" width="100%">
 
-<p align="center">
-  <img src="src/images/ss3" alt="Create Poll" width="48%">
-</p>
+<img src="src/images/ss3" alt="Create Poll" width="48%">
 
 ---
 
